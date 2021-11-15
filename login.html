@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/reset.css" />
+    <link
+      href="//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      font-family: "Spoqa Han Sans Neo", "sans-serif";
+    }
+
+    body {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #e5e5e5;
+    }
+
+    main {
+      width: 520px;
+      height: 712px;
+      border-radius: 10px;
+      background: #fff;
+      border: 1px solid #c4c4c4;
+      box-sizing: border-box;
+    }
+
+    main header {
+      height: 58px;
+      width: 520px;
+      border-bottom: 1px solid #c4c4c4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 20px;
+      font-style: normal;
+      font-family: Spoqa Han Sans Neo;
+      box-sizing: border-box;
+      position: relative;
+      margin-bottom: 26px;
+    }
+
+    .turn-off {
+      position: absolute;
+      height: 0px;
+      width: 22.40226135061049px;
+      right: 22px;
+      top: 27px;
+    }
+    main header .line-1 {
+      width: 22px;
+      border-bottom: 1px solid #767676;
+      font-weight: 400;
+      transform: rotate(-135deg);
+      position: absolute;
+    }
+
+    main header .line-2 {
+      width: 22px;
+      border-bottom: 1px solid #767676;
+      font-weight: 400;
+      transform: rotate(135deg);
+      position: absolute;
+    }
+
+    main h2 {
+      margin-left: 24px;
+      font-family: Spoqa Han Sans Neo;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 24px;
+      margin-bottom: 24px;
+    }
+
+    form {
+      width: 472px;
+      height: 225px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      /* align-items: center; */
+      margin-left: 24px;
+      margin-bottom: 20px;
+    }
+    form input {
+      width: 472px;
+      height: 50px;
+      margin-bottom: 10px;
+      padding: 15px 0 15px 16px;
+      color: #767676;
+      border: 1px solid #c4c4c4;
+      box-sizing: border-box;
+      background: #ffffff;
+      border-radius: 5px;
+      font-size: 16px;
+      line-height: 20px;
+      font-family: Spoqa Han Sans Neo;
+    }
+
+    .checkbox-btn {
+      width: 160px;
+      height: 22px;
+      display: flex;
+      align-items: center;
+      box-sizing: border-box;
+      margin-bottom: 21px;
+      margin-top: 7px;
+    }
+
+    .round {
+      position: relative;
+      width: 22px;
+      height: 22px;
+      margin-right: 10px;
+    }
+
+    .round label {
+      background-color: #fff;
+      border: 1px solid #767676;
+      border-radius: 50%;
+      width: 22px;
+      height: 22px;
+      cursor: pointer;
+      left: 0;
+      top: 0;
+      position: absolute;
+      /* box-sizing: border-box; */
+    }
+
+    .checkbox-btn input {
+      width: 22px;
+      height: 22px;
+      display: none;
+    }
+
+    .checkbox-btn span {
+      color: #767676;
+      font-weight: 500;
+      line-height: 20px;
+      font-size: 16px;
+      font-family: Spoqa Han Sans Neo;
+    }
+
+    label div {
+      width: 5.5px;
+      height: 8.5px;
+      border-top: 1px solid #767676;
+      border-left: 1px solid #767676;
+      transform: rotate(-140deg);
+      position: absolute;
+      left: 7.3px;
+      top: 4.1px;
+    }
+
+    .round input[type="checkbox"] {
+      visibility: hidden;
+    }
+
+    .round input[type="checkbox"]:checked + label {
+      background-color: #2f80ed;
+      border: 1px solid #2f80ed;
+    }
+
+    .round input[type="checkbox"]:checked + label div {
+      border-color: #fff;
+    }
+
+    form button {
+      width: 472px;
+      height: 50px;
+      background: #2f80ed;
+      border-radius: 5px;
+      box-sizing: border-box;
+      padding: 14px 0 14px 0;
+      font-family: Spoqa Han Sans Neo;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 22px;
+      color: #ffffff;
+      border: none;
+    }
+
+    .find-count {
+      width: 472px;
+      box-sizing: border-box;
+      height: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 24px;
+      margin-bottom: 30px;
+    }
+
+    .find-count a {
+      color: #767676;
+      font-size: 14px;
+      line-height: 18px;
+    }
+
+    .find-count div {
+      border-left: 1px solid #767676;
+      width: 4px;
+      height: 15px;
+      margin-left: 12px;
+      margin-right: 8px;
+    }
+
+    .line {
+      width: 472px;
+      height: 18px;
+      margin-left: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #767676;
+      font-size: 14px;
+      box-sizing: border-box;
+      line-height: 18px;
+      margin-bottom: 20px;
+    }
+
+    .line::after {
+      content: "";
+      width: 210px;
+      height: 1px;
+      background: #c4c4c4;
+    }
+
+    .line::before {
+      content: "";
+      width: 210px;
+      height: 1px;
+      background: #c4c4c4;
+    }
+
+    .line span {
+      margin-left: 13px;
+      margin-right: 13px;
+    }
+
+    .oath {
+      height: 230px;
+      width: 472px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin-left: 24px;
+    }
+
+    .btn {
+      width: 472px;
+      height: 50px;
+      background: #ffffff;
+      border: 1px solid #767676;
+      box-sizing: border-box;
+      border-radius: 5px;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 20px;
+      color: #767676;
+      margin-bottom: 10px;
+    }
+
+    .google {
+      position: relative;
+    }
+    .google img {
+      position: absolute;
+      right: 430px;
+      bottom: 8px;
+    }
+
+    .face {
+      border: 1px solid #2d9cdb;
+      position: relative;
+    }
+
+    .face img {
+      position: absolute;
+      right: 430px;
+      bottom: 8px;
+    }
+
+    .naver {
+      border: 1px solid #00bf18;
+      position: relative;
+    }
+
+    .naver img {
+      position: absolute;
+      right: 430px;
+      bottom: 8px;
+    }
+
+    .kakao {
+      border: 1px solid #f2c94c;
+      position: relative;
+    }
+
+    .kakao img {
+      position: absolute;
+      right: 430px;
+      bottom: 8px;
+    }
+  </style>
+  <body>
+    <main>
+      <!-- 머리 -->
+      <header>
+        <strong>로그인 또는 회원가입</strong>
+        <div class="turn-off">
+          <div class="line-1"></div>
+          <div class="line-2"></div>
+        </div>
+      </header>
+      <h2>위니프에서 여러분의 궁금증을 해결하세요!:)</h2>
+      <!-- 로그인 폼 -->
+      <form action="">
+        <input type="text" placeholder="아이디" />
+        <input type="text" placeholder="비밀번호" />
+        <div class="checkbox-btn">
+          <div class="round">
+            <input type="checkbox" checked id="checkbox" />
+            <label for="checkbox">
+              <div></div>
+            </label>
+          </div>
+          <span>로그인 상태 유지</span>
+        </div>
+        <button>로그인</button>
+      </form>
+      <!-- 비밀번호 찾기 -->
+      <section class="find-count">
+        <a href="#">회원가입</a>
+        <div></div>
+        <a href="#">아이디/비밀번호 찾기</a>
+      </section>
+      <section class="line">
+        <span> 또는 </span>
+      </section>
+      <section class="oath">
+        <button class="btn google">
+          <img src="/3_img/Google__G__Logo 1.png" alt="" />구글 계정으로 로그인
+        </button>
+        <button class="btn face">
+          <img src="/3_img/facebook.png" alt="" />페이스북 계정으로 로그인
+        </button>
+        <button class="btn naver">
+          <img src="/3_img/naver-logo.png" alt="" />네이버 계정으로 로그인
+        </button>
+        <button class="btn kakao">
+          <img src="/3_img/message-circle.png" alt="" />카카오톡 계정으로 로그인
+        </button>
+      </section>
+    </main>
+  </body>
+</html>
